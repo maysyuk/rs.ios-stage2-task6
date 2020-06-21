@@ -5,6 +5,9 @@
 
 #import "NavigationMainController.h"
 #import "TabBarController.h"
+#import "ViewInfoController.h"
+#import "ViewGalleryController.h"
+#import "ViewAboutController.h"
 
 
 @implementation NavigationMainController
@@ -12,9 +15,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self setBackground];
 
     [self startButton];
+}
+
+- (void)setBackground {
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)startButton {
@@ -31,7 +38,19 @@
 }
 
 - (void)startTapped {
-    [self.navigationController pushViewController: [TabBarController new] animated:NO];
+    UIViewController *tab1 = [ViewInfoController new];
+    tab1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Info" image:[UIImage imageNamed:@"Star"] tag:0];
+
+    UIViewController *tab2 = [ViewGalleryController new];
+    tab2.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Gallery" image:[UIImage imageNamed:@"Star"] tag:0];
+
+    UIViewController *tab3 = [ViewAboutController new];
+    tab3.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"About" image:[UIImage imageNamed:@"Star"] tag:0];
+
+    TabBarController *tabBarController = [TabBarController new];
+    tabBarController.viewControllers = @[tab1, tab2, tab3];
+
+    [self.navigationController pushViewController:tabBarController animated:NO];
 }
 
 

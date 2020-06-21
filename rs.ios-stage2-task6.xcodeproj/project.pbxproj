@@ -13,7 +13,10 @@
 		44A18360249FFAF700AA1350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A1835F249FFAF700AA1350 /* Assets.xcassets */; };
 		44A18363249FFAF700AA1350 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A18361249FFAF700AA1350 /* LaunchScreen.storyboard */; };
 		44A18366249FFAF700AA1350 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A18365249FFAF700AA1350 /* main.m */; };
+		B2FA8121A2F6E9A5474C03C4 /* ViewInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA8C5D36C667D4A583282D /* ViewInfoController.m */; };
 		B2FA837A3D53CF37BDCC4330 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA8B1DFAC57E6AB4F2A28A /* TabBarController.m */; };
+		B2FA8751C2023BD0DC67B40F /* ViewAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA8409C5418C034DE8B8B5 /* ViewAboutController.m */; };
+		B2FA88BCD9F4E3BE1905F2DA /* ViewGalleryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA859D2931BBB4A3150920 /* ViewGalleryController.m */; };
 		B2FA8A5C5A088043CCC372E6 /* NavigationMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA8F4BB53B2E19932DE8BB /* NavigationMainController.m */; };
 /* End PBXBuildFile section */
 
@@ -29,9 +32,15 @@
 		44A18362249FFAF700AA1350 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44A18364249FFAF700AA1350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44A18365249FFAF700AA1350 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B2FA8409C5418C034DE8B8B5 /* ViewAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewAboutController.m; sourceTree = "<group>"; };
+		B2FA859D2931BBB4A3150920 /* ViewGalleryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewGalleryController.m; sourceTree = "<group>"; };
+		B2FA8AAA964DFB0A7E51097E /* ViewInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewInfoController.h; sourceTree = "<group>"; };
 		B2FA8B1DFAC57E6AB4F2A28A /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		B2FA8B8E54A00D8A289EAF32 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		B2FA8BE217F6962356D2DF3C /* ViewAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewAboutController.h; sourceTree = "<group>"; };
+		B2FA8C5D36C667D4A583282D /* ViewInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewInfoController.m; sourceTree = "<group>"; };
 		B2FA8D2AD2139A34E159E2AD /* NavigationMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationMainController.h; sourceTree = "<group>"; };
+		B2FA8ED99C948BCD5C2823F6 /* ViewGalleryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewGalleryController.h; sourceTree = "<group>"; };
 		B2FA8F4BB53B2E19932DE8BB /* NavigationMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationMainController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +88,12 @@
 				B2FA8D2AD2139A34E159E2AD /* NavigationMainController.h */,
 				B2FA8B1DFAC57E6AB4F2A28A /* TabBarController.m */,
 				B2FA8B8E54A00D8A289EAF32 /* TabBarController.h */,
+				B2FA8C5D36C667D4A583282D /* ViewInfoController.m */,
+				B2FA8AAA964DFB0A7E51097E /* ViewInfoController.h */,
+				B2FA859D2931BBB4A3150920 /* ViewGalleryController.m */,
+				B2FA8ED99C948BCD5C2823F6 /* ViewGalleryController.h */,
+				B2FA8409C5418C034DE8B8B5 /* ViewAboutController.m */,
+				B2FA8BE217F6962356D2DF3C /* ViewAboutController.h */,
 			);
 			path = "rs.ios-stage2-task6";
 			sourceTree = "<group>";
@@ -158,6 +173,9 @@
 				44A18358249FFAF600AA1350 /* SceneDelegate.m in Sources */,
 				B2FA8A5C5A088043CCC372E6 /* NavigationMainController.m in Sources */,
 				B2FA837A3D53CF37BDCC4330 /* TabBarController.m in Sources */,
+				B2FA8121A2F6E9A5474C03C4 /* ViewInfoController.m in Sources */,
+				B2FA88BCD9F4E3BE1905F2DA /* ViewGalleryController.m in Sources */,
+				B2FA8751C2023BD0DC67B40F /* ViewAboutController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
