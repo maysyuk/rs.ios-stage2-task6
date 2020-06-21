@@ -1,5 +1,6 @@
 #import "SceneDelegate.h"
 #import "ViewController.h"
+#import "NavigationMainController.h"
 
 @interface SceneDelegate ()
 
@@ -14,11 +15,16 @@
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
     UIWindow *window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *) scene];
-    window.rootViewController = [ViewController new];
-    window.backgroundColor = [UIColor whiteColor];
+    window.rootViewController = [self rootViewController];
 
     self.window = window;
     [self.window makeKeyAndVisible];
+}
+
+- (UIViewController *) rootViewController {
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[NavigationMainController new]];
+    [navigationController setNavigationBarHidden:YES animated:NO];
+    return navigationController;
 }
 
 

@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    // initWithNavigationBarClass
+    // setNavigationBarHidden
+
     // Do any additional setup after loading the view.
 }
 
