@@ -13,6 +13,7 @@
 		44A18360249FFAF700AA1350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A1835F249FFAF700AA1350 /* Assets.xcassets */; };
 		44A18363249FFAF700AA1350 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A18361249FFAF700AA1350 /* LaunchScreen.storyboard */; };
 		44A18366249FFAF700AA1350 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A18365249FFAF700AA1350 /* main.m */; };
+		B2FA837A3D53CF37BDCC4330 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA8B1DFAC57E6AB4F2A28A /* TabBarController.m */; };
 		B2FA8A5C5A088043CCC372E6 /* NavigationMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA8F4BB53B2E19932DE8BB /* NavigationMainController.m */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,8 @@
 		44A18362249FFAF700AA1350 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44A18364249FFAF700AA1350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44A18365249FFAF700AA1350 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B2FA8B1DFAC57E6AB4F2A28A /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		B2FA8B8E54A00D8A289EAF32 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		B2FA8D2AD2139A34E159E2AD /* NavigationMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationMainController.h; sourceTree = "<group>"; };
 		B2FA8F4BB53B2E19932DE8BB /* NavigationMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationMainController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +77,8 @@
 				44A18365249FFAF700AA1350 /* main.m */,
 				B2FA8F4BB53B2E19932DE8BB /* NavigationMainController.m */,
 				B2FA8D2AD2139A34E159E2AD /* NavigationMainController.h */,
+				B2FA8B1DFAC57E6AB4F2A28A /* TabBarController.m */,
+				B2FA8B8E54A00D8A289EAF32 /* TabBarController.h */,
 			);
 			path = "rs.ios-stage2-task6";
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 				44A18366249FFAF700AA1350 /* main.m in Sources */,
 				44A18358249FFAF600AA1350 /* SceneDelegate.m in Sources */,
 				B2FA8A5C5A088043CCC372E6 /* NavigationMainController.m in Sources */,
+				B2FA837A3D53CF37BDCC4330 /* TabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
