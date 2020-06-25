@@ -18,4 +18,10 @@
     self.view.backgroundColor = [UIColor colorWithRed:225.0f/255.0f green:93.0f/255.0f blue:68.0f/255.0f alpha:1.0];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    self.parentViewController.navigationItem.title = @"Gallery";
+}
+
 @end

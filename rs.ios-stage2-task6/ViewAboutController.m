@@ -18,4 +18,10 @@
     self.view.backgroundColor = [UIColor colorWithRed:127.0f/255.0f green:205.0f/255.0f blue:205.0f/255.0f alpha:1.0];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    self.parentViewController.navigationItem.title = @"RSSchool Task 6";
+}
+
 @end
