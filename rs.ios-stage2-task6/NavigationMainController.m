@@ -42,10 +42,10 @@
     tab1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Info" image:[UIImage imageNamed:@"Star"] tag:0];
 
     UIViewController *tab2 = [ViewGalleryController new];
-    tab2.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Gallery" image:[UIImage imageNamed:@"Star"] tag:0];
+    tab2.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Gallery" image:[UIImage imageNamed:@"Star"] tag:1];
 
     UIViewController *tab3 = [ViewAboutController new];
-    tab3.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"About" image:[UIImage imageNamed:@"Star"] tag:0];
+    tab3.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"About" image:[UIImage imageNamed:@"Star"] tag:2];
 
     TabBarController *tabBarController = [TabBarController new];
     tabBarController.viewControllers = @[tab1, tab2, tab3];
