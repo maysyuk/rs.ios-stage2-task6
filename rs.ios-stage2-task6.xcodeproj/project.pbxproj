@@ -302,6 +302,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R5N8K86LAL;
 				INFOPLIST_FILE = "rs.ios-stage2-task6/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -318,6 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R5N8K86LAL;
 				INFOPLIST_FILE = "rs.ios-stage2-task6/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
