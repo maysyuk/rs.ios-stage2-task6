@@ -39,14 +39,23 @@
 - (void)startButton {
     UIButton *startButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     startButton.frame = CGRectMake(50.0, 500.0, 300.0, 50.0);
-    startButton.backgroundColor = [UIColor yellowColor];
-    [startButton setTitle:@"START" forState:UIControlStateNormal];
-    [startButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    startButton.titleLabel.font = [UIFont systemFontOfSize:20 weight:UIFontWeightMedium];
-    //startButton.clipsToBounds = YES;
     startButton.layer.cornerRadius = 55.0 / 2.0f;
+    startButton.backgroundColor = [UIColor rsschoolYellowColor];
+    startButton.titleLabel.font = [UIFont systemFontOfSize:20 weight:UIFontWeightMedium];
+    [startButton setTitle:@"START" forState:UIControlStateNormal];
+    [startButton setTitleColor:[UIColor rsschoolBlackColor] forState:UIControlStateNormal];
     [startButton addTarget:self action:@selector(startTapped) forControlEvents:UIControlEventTouchUpInside];
+    startButton.translatesAutoresizingMaskIntoConstraints = NO;
+
     [self.view addSubview:startButton];
+
+    [NSLayoutConstraint activateConstraints:@[
+        [startButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
+        [startButton.topAnchor constraintEqualToAnchor:self.view.centerYAnchor constant:140],
+        [startButton.heightAnchor constraintEqualToConstant:55],
+        [startButton.widthAnchor constraintEqualToConstant:300],
+    ]];
+
 }
 
 - (void)startTapped {
