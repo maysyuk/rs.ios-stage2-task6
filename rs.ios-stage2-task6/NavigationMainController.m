@@ -59,6 +59,7 @@
 
     TabBarController *tabBarController = [TabBarController new];
     tabBarController.viewControllers = @[tab1, tab2, tab3];
+    tabBarController.selectedViewController = tab2;
 
     [self.navigationController pushViewController:tabBarController animated:NO];
 }
