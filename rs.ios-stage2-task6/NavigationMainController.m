@@ -8,6 +8,7 @@
 #import "ViewInfoController.h"
 #import "ViewGalleryController.h"
 #import "ViewAboutController.h"
+#import "UIColor_RSColors.h"
 
 
 @implementation NavigationMainController
@@ -27,6 +28,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [UINavigationBar appearance].barTintColor = [UIColor rsschoolYellowColor];
 }
 
 //- (void)viewWillDisappear:(BOOL)animated {
