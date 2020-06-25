@@ -18,6 +18,12 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    [self.navigationItem setHidesBackButton:YES animated:YES];
+}
+
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
