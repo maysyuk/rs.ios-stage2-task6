@@ -24,6 +24,16 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+//- (void)viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:animated];
+//    [self.navigationController setNavigationBarHidden:NO animated:YES];
+//}
+
 - (void)startButton {
     UIButton *startButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     startButton.frame = CGRectMake(50.0, 500.0, 300.0, 50.0);

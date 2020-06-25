@@ -23,7 +23,6 @@
 - (UIViewController *) rootViewController {
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[NavigationMainController new]];
     [navigationController setToolbarHidden:YES];
-    [navigationController setNavigationBarHidden:YES animated:NO];
     return navigationController;
 }
 
