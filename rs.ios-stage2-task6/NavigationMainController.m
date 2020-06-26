@@ -16,9 +16,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self addLabel];
     [self setBackground];
 
     [self startButton];
+}
+
+- (void)addLabel {
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"Are you ready?";
+    label.font = [UIFont systemFontOfSize:24 weight:UIFontWeightMedium];
+
+    [self.view addSubview:label];
+
+    label.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [label.bottomAnchor constraintEqualToAnchor:self.view.centerYAnchor constant:-200],
+        [label.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor]
+    ]];
 }
 
 - (void)setBackground {
