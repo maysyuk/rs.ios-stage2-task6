@@ -9,6 +9,16 @@
 
 @implementation InfoTableViewCell
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier {
+    self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
+    if (self) {
+        // no ops
+    }
+
+    return self;
+}
+
+
 - (void)configureWithCell:(ImageItem *)imageItem {
     self.imageView.image = imageItem.image;
     self.textLabel.text = imageItem.title;
