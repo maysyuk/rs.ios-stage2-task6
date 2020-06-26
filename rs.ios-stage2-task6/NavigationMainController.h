@@ -8,4 +8,9 @@
 
 
 @interface NavigationMainController : UIViewController
+
+@property (strong, nonatomic) UIView *triangleView;
+@property (strong, nonatomic) UIView *squareView;
+@property (strong, nonatomic) UIView *circleView;
+
 @end

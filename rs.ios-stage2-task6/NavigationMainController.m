@@ -29,6 +29,34 @@
     [UINavigationBar appearance].barTintColor = [UIColor rsschoolYellowColor];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [UIView animateWithDuration:1
+                          delay:0
+                        options:UIViewAnimationOptionRepeat
+                     animations:^{
+                            [self.triangleView setTransform:CGAffineTransformMakeRotation(360)];
+                     }
+                     completion:^(BOOL finished) {}];
+
+    [UIView animateWithDuration:1
+                          delay:0
+                        options:UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat
+                     animations:^{
+                         self.squareView.center = CGPointMake(self.squareView.center.x, self.squareView.center.y + self.squareView.frame.size.width * 0.1);
+                         self.squareView.center = CGPointMake(self.squareView.center.x, self.squareView.center.y - self.squareView.frame.size.width * 0.1);
+                     }
+                     completion:^(BOOL finished) {}];
+
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    animation.fromValue = @0.8F;
+    animation.toValue = @1.0F;
+    animation.duration = 1.0;
+    animation.autoreverses = YES;
+    animation.repeatCount = HUGE_VALF;
+    [self.circleView.layer addAnimation:animation forKey:@"scale"];
+}
+
 - (void)addLabel {
     UILabel *label = [[UILabel alloc] init];
     label.text = @"Are you ready?";
@@ -44,12 +72,12 @@
 }
 
 - (void)addFigures {
-    UIView *circleView = [[UIView alloc] init];
-    circleView.layer.cornerRadius = 35;
-    circleView.backgroundColor = [UIColor rsschoolRedColor];
+    self.circleView = [[UIView alloc] init];
+    self.circleView.layer.cornerRadius = 35;
+    self.circleView.backgroundColor = [UIColor rsschoolRedColor];
     
-    UIView *squareView = [[UIView alloc] init];
-    squareView.backgroundColor = [UIColor rsschoolBlueColor];
+    self.squareView = [[UIView alloc] init];
+    self.squareView.backgroundColor = [UIColor rsschoolBlueColor];
 
     UIBezierPath *trianglePath = [UIBezierPath bezierPath];
     [trianglePath moveToPoint:CGPointMake(35, 0)];
@@ -59,33 +87,33 @@
     CAShapeLayer *triangleMaskLayer = [CAShapeLayer layer];
     [triangleMaskLayer setPath:trianglePath.CGPath];
     
-    UIView *triangleView = [[UIView alloc] init];
-    triangleView.backgroundColor = [UIColor rsschoolGreenColor];
-    triangleView.layer.mask = triangleMaskLayer;
+    self.triangleView = [[UIView alloc] init];
+    self.triangleView.backgroundColor = [UIColor rsschoolGreenColor];
+    self.triangleView.layer.mask = triangleMaskLayer;
 
     UIStackView *stackView = [[UIStackView alloc] init];
     stackView.axis = UILayoutConstraintAxisHorizontal;
     stackView.distribution = UIStackViewDistributionEqualCentering;
     stackView.alignment = UIStackViewAlignmentCenter;
 
-    [stackView addArrangedSubview:circleView];
-    [stackView addArrangedSubview:squareView];
-    [stackView addArrangedSubview:triangleView];
+    [stackView addArrangedSubview:self.circleView];
+    [stackView addArrangedSubview:self.squareView];
+    [stackView addArrangedSubview:self.triangleView];
 
-    circleView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.circleView.translatesAutoresizingMaskIntoConstraints = NO;
     [NSLayoutConstraint activateConstraints:@[
-        [circleView.heightAnchor constraintEqualToConstant:70],
-        [circleView.widthAnchor constraintEqualToConstant:70]
+        [self.circleView.heightAnchor constraintEqualToConstant:70],
+        [self.circleView.widthAnchor constraintEqualToConstant:70]
     ]];
-    squareView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.squareView.translatesAutoresizingMaskIntoConstraints = NO;
     [NSLayoutConstraint activateConstraints:@[
-        [squareView.heightAnchor constraintEqualToConstant:70],
-        [squareView.widthAnchor constraintEqualToConstant:70]
+        [self.squareView.heightAnchor constraintEqualToConstant:70],
+        [self.squareView.widthAnchor constraintEqualToConstant:70]
     ]];
-    triangleView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.triangleView.translatesAutoresizingMaskIntoConstraints = NO;
     [NSLayoutConstraint activateConstraints:@[
-        [triangleView.heightAnchor constraintEqualToConstant:70],
-        [triangleView.widthAnchor constraintEqualToConstant:70]
+        [self.triangleView.heightAnchor constraintEqualToConstant:70],
+        [self.triangleView.widthAnchor constraintEqualToConstant:70]
     ]];
 
     [self.view addSubview:stackView];
