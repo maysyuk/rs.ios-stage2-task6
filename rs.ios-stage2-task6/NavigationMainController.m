@@ -16,11 +16,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self setBackground];
     [self addLabel];
     [self addFigures];
-    [self setBackground];
-
-    [self startButton];
+    [self addStartButton];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -55,6 +54,10 @@
     animation.autoreverses = YES;
     animation.repeatCount = HUGE_VALF;
     [self.circleView.layer addAnimation:animation forKey:@"scale"];
+}
+
+- (void)setBackground {
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)addLabel {
@@ -126,11 +129,7 @@
     ]];
 }
 
-- (void)setBackground {
-    self.view.backgroundColor = [UIColor whiteColor];
-}
-
-- (void)startButton {
+- (void)addStartButton {
     UIButton *startButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     startButton.frame = CGRectMake(50.0, 500.0, 300.0, 50.0);
     startButton.layer.cornerRadius = 55.0 / 2.0f;

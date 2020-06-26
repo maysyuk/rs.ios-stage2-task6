@@ -15,4 +15,10 @@
     self.view.backgroundColor = [UIColor grayColor];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    self.navigationController.navigationItem.title = @"IMG_0001.HEIC";
+}
+
 @end

@@ -56,7 +56,7 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [[self parentViewController].navigationController pushViewController:[ViewPhotoController new] animated:YES];
+    [self.navigationController pushViewController:[ViewPhotoController new] animated:YES];
 }
 
 
