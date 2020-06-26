@@ -6,6 +6,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@class ImageItem;
 
-@interface ViewInfoController : UIViewController
+
+@interface ViewInfoController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, copy) NSArray <ImageItem*> *items;
+
 @end
