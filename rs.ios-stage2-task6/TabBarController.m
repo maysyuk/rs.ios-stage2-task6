@@ -14,6 +14,16 @@
     [self setBackground];
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+
+    int tabBarHeight = 70;
+    CGRect tabBarFrame = self.tabBar.frame;
+    tabBarFrame.size.height = tabBarHeight;
+    tabBarFrame.origin.y = self.view.frame.size.height - tabBarHeight;
+    self.tabBar.frame = tabBarFrame;
+}
+
 - (void)setBackground {
     self.view.backgroundColor = [UIColor whiteColor];
 }
