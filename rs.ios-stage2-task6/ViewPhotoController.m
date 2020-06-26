@@ -7,11 +7,8 @@
 #import "ViewPhotoController.h"
 
 
-@implementation ViewPhotoController {
+@implementation ViewPhotoController
 
-
-
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
 

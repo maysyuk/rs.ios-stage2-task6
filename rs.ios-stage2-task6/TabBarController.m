@@ -17,15 +17,7 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
 
-    int tabBarHeight = 70;
-    CGRect tabBarFrame = self.tabBar.frame;
-    tabBarFrame.size.height = tabBarHeight;
-    tabBarFrame.origin.y = self.view.frame.size.height - tabBarHeight;
-    self.tabBar.frame = tabBarFrame;
-}
-
-- (void)setBackground {
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self setTabBarHeight];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -38,6 +30,18 @@
     [super viewDidAppear:animated];
 
     [self.navigationController setNavigationBarHidden:NO animated:YES]; // if you don't need animation - put this under viewWillAppear
+}
+
+- (void)setBackground {
+    self.view.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)setTabBarHeight {
+    int tabBarHeight = 70;
+    CGRect tabBarFrame = self.tabBar.frame;
+    tabBarFrame.size.height = tabBarHeight;
+    tabBarFrame.origin.y = self.view.frame.size.height - tabBarHeight;
+    self.tabBar.frame = tabBarFrame;
 }
 
 
