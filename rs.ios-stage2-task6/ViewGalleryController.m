@@ -4,6 +4,7 @@
 //
 
 #import "ViewGalleryController.h"
+#import "ViewPhotoController.h"
 
 
 @implementation ViewGalleryController
@@ -52,6 +53,10 @@
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(5, 5, 5, 5);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [[self parentViewController].navigationController pushViewController:[ViewPhotoController new] animated:YES];
 }
 
 

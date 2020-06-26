@@ -13,6 +13,7 @@
 		44A18363249FFAF700AA1350 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A18361249FFAF700AA1350 /* LaunchScreen.storyboard */; };
 		44A18366249FFAF700AA1350 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A18365249FFAF700AA1350 /* main.m */; };
 		B2FA8121A2F6E9A5474C03C4 /* ViewInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA8C5D36C667D4A583282D /* ViewInfoController.m */; };
+		B2FA81E514A4931386D7288E /* ViewPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA893FB171E3726AC0CC29 /* ViewPhotoController.m */; };
 		B2FA837A3D53CF37BDCC4330 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA8B1DFAC57E6AB4F2A28A /* TabBarController.m */; };
 		B2FA8751C2023BD0DC67B40F /* ViewAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA8409C5418C034DE8B8B5 /* ViewAboutController.m */; };
 		B2FA88BCD9F4E3BE1905F2DA /* ViewGalleryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA859D2931BBB4A3150920 /* ViewGalleryController.m */; };
@@ -34,6 +35,8 @@
 		B2FA8409C5418C034DE8B8B5 /* ViewAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewAboutController.m; sourceTree = "<group>"; };
 		B2FA845C7F993E313D205B0A /* UIColor_RSColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColor_RSColors.h; sourceTree = "<group>"; };
 		B2FA859D2931BBB4A3150920 /* ViewGalleryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewGalleryController.m; sourceTree = "<group>"; };
+		B2FA86767734E859279E7043 /* ViewPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPhotoController.h; sourceTree = "<group>"; };
+		B2FA893FB171E3726AC0CC29 /* ViewPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPhotoController.m; sourceTree = "<group>"; };
 		B2FA8AAA964DFB0A7E51097E /* ViewInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewInfoController.h; sourceTree = "<group>"; };
 		B2FA8B1DFAC57E6AB4F2A28A /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		B2FA8B8E54A00D8A289EAF32 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 				B2FA8409C5418C034DE8B8B5 /* ViewAboutController.m */,
 				B2FA80784D4808AD2EDB3908 /* UIColor_RSColors.m */,
 				B2FA845C7F993E313D205B0A /* UIColor_RSColors.h */,
+				B2FA893FB171E3726AC0CC29 /* ViewPhotoController.m */,
+				B2FA86767734E859279E7043 /* ViewPhotoController.h */,
 			);
 			path = "rs.ios-stage2-task6";
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				B2FA88BCD9F4E3BE1905F2DA /* ViewGalleryController.m in Sources */,
 				B2FA8751C2023BD0DC67B40F /* ViewAboutController.m in Sources */,
 				B2FA8A08065724763BC01917 /* UIColor_RSColors.m in Sources */,
+				B2FA81E514A4931386D7288E /* ViewPhotoController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
