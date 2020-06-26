@@ -55,13 +55,22 @@
 
 - (void)startTapped {
     UIViewController *tab1 = [ViewInfoController new];
-    tab1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Info" image:[UIImage imageNamed:@"Star"] tag:0];
+    tab1.tabBarItem = [[UITabBarItem alloc] init];
+    tab1.tabBarItem.image = [[UIImage imageNamed:@"info_unselected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    tab1.tabBarItem.selectedImage = [[UIImage imageNamed:@"info_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    tab1.tabBarItem.tag = 0;
 
     UIViewController *tab2 = [ViewGalleryController new];
-    tab2.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Gallery" image:[UIImage imageNamed:@"Star"] tag:1];
+    tab2.tabBarItem = [[UITabBarItem alloc] init];
+    tab2.tabBarItem.image = [[UIImage imageNamed:@"gallery_unselected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    tab2.tabBarItem.selectedImage = [[UIImage imageNamed:@"gallery_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    tab2.tabBarItem.tag = 1;
 
     UIViewController *tab3 = [ViewAboutController new];
-    tab3.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"About" image:[UIImage imageNamed:@"Star"] tag:2];
+    tab3.tabBarItem = [[UITabBarItem alloc] init];
+    tab3.tabBarItem.image = [[UIImage imageNamed:@"home_unselected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    tab3.tabBarItem.selectedImage = [[UIImage imageNamed:@"home_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    tab3.tabBarItem.tag = 3;
 
     TabBarController *tabBarController = [TabBarController new];
     tabBarController.viewControllers = @[tab1, tab2, tab3];
