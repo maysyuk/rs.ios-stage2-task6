@@ -22,7 +22,7 @@
     [collectionView setDataSource:self];
     [collectionView setDelegate:self];
     [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
-    collectionView.backgroundColor = [UIColor redColor];
+    [collectionView setBackgroundColor: [UIColor whiteColor]];
     [self.view addSubview:collectionView];
 }
 
@@ -42,7 +42,7 @@
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor greenColor];
+    cell.backgroundColor = [UIColor grayColor];
     return cell;
 }
 
