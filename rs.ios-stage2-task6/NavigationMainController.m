@@ -17,9 +17,16 @@
     [super viewDidLoad];
 
     [self addLabel];
+    [self addFigures];
     [self setBackground];
 
     [self startButton];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [UINavigationBar appearance].barTintColor = [UIColor rsschoolYellowColor];
 }
 
 - (void)addLabel {
@@ -36,14 +43,63 @@
     ]];
 }
 
-- (void)setBackground {
-    self.view.backgroundColor = [UIColor whiteColor];
+- (void)addFigures {
+    UIView *circleView = [[UIView alloc] init];
+    circleView.layer.cornerRadius = 35;
+    circleView.backgroundColor = [UIColor rsschoolRedColor];
+    
+    UIView *squareView = [[UIView alloc] init];
+    squareView.backgroundColor = [UIColor rsschoolBlueColor];
+
+    UIBezierPath *trianglePath = [UIBezierPath bezierPath];
+    [trianglePath moveToPoint:CGPointMake(35, 0)];
+    [trianglePath addLineToPoint:CGPointMake(0, 70)];
+    [trianglePath addLineToPoint:CGPointMake(70, 70)];
+    [trianglePath closePath];
+    CAShapeLayer *triangleMaskLayer = [CAShapeLayer layer];
+    [triangleMaskLayer setPath:trianglePath.CGPath];
+    
+    UIView *triangleView = [[UIView alloc] init];
+    triangleView.backgroundColor = [UIColor rsschoolGreenColor];
+    triangleView.layer.mask = triangleMaskLayer;
+
+    UIStackView *stackView = [[UIStackView alloc] init];
+    stackView.axis = UILayoutConstraintAxisHorizontal;
+    stackView.distribution = UIStackViewDistributionEqualCentering;
+    stackView.alignment = UIStackViewAlignmentCenter;
+
+    [stackView addArrangedSubview:circleView];
+    [stackView addArrangedSubview:squareView];
+    [stackView addArrangedSubview:triangleView];
+
+    circleView.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [circleView.heightAnchor constraintEqualToConstant:70],
+        [circleView.widthAnchor constraintEqualToConstant:70]
+    ]];
+    squareView.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [squareView.heightAnchor constraintEqualToConstant:70],
+        [squareView.widthAnchor constraintEqualToConstant:70]
+    ]];
+    triangleView.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [triangleView.heightAnchor constraintEqualToConstant:70],
+        [triangleView.widthAnchor constraintEqualToConstant:70]
+    ]];
+
+    [self.view addSubview:stackView];
+
+    stackView.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [stackView.topAnchor constraintEqualToAnchor:self.view.centerYAnchor constant:-70],
+        [stackView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
+        [stackView.widthAnchor constraintEqualToConstant:300]
+    ]];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-    [UINavigationBar appearance].barTintColor = [UIColor rsschoolYellowColor];
+- (void)setBackground {
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)startButton {
