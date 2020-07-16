@@ -24,8 +24,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-    [UINavigationBar appearance].barTintColor = [UIColor rsschoolYellowColor];
+
+    [self customizeNavigationBar];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -178,6 +178,21 @@
     tabBarController.selectedViewController = tab2;
 
     [self.navigationController pushViewController:tabBarController animated:NO];
+}
+
+- (void)customizeNavigationBar {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [UINavigationBar appearance].barTintColor = [UIColor rsschoolYellowColor];
+
+    NSShadow* shadow = [NSShadow new];
+    shadow.shadowOffset = CGSizeMake(0.0f, 0.0f);
+    shadow.shadowColor = [UIColor blackColor];
+
+    [[UINavigationBar appearance] setTitleTextAttributes: @{
+        NSForegroundColorAttributeName: [UIColor blackColor],
+        NSFontAttributeName: [UIFont systemFontOfSize:18.0f weight:UIFontWeightSemibold],
+        NSShadowAttributeName: shadow
+    }];
 }
 
 
